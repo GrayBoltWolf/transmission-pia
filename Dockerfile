@@ -8,6 +8,7 @@ RUN apt-get update && \
 # switch to non-root user
 USER container
 ENV  USER=container HOME=/home/container
+WORKDIR /home/container
 
 # Download PIA
 RUN curl https://installers.privateinternetaccess.com/download/pia-linux-3.3.1-06924.run --output pia.run
