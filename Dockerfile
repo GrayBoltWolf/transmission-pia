@@ -9,6 +9,9 @@ RUN apt-get update && \
 RUN groupadd -g 1000 container
 RUN useradd -u 1000 -g container -s /bin/sh -m container
 RUN adduser container sudo
+# don't try this at home
+RUN echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+
 USER 1000:1000
 WORKDIR /home/container
 
