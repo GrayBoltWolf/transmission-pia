@@ -4,3 +4,5 @@ piactl login creds.txt
 piactl set protocol wireguard
 piactl background enable
 piactl connect
+
+transmission-daemon
